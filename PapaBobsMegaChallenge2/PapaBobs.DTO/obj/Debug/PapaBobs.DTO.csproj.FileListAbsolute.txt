@@ -1,0 +1,5 @@
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.DTO\bin\Debug\PapaBobs.DTO.dll
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.DTO\bin\Debug\PapaBobs.DTO.pdb
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.DTO\obj\Debug\PapaBobs.DTO.csprojResolveAssemblyReference.cache
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.DTO\obj\Debug\PapaBobs.DTO.dll
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.DTO\obj\Debug\PapaBobs.DTO.pdb

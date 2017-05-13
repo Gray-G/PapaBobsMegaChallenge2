@@ -1,0 +1,12 @@
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.Persistence\bin\Debug\PapaBobs.Persistence.dll.config
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.Persistence\bin\Debug\PapaBobs.Persistence.dll
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.Persistence\bin\Debug\PapaBobs.Persistence.pdb
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.Persistence\bin\Debug\EntityFramework.dll
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.Persistence\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.Persistence\bin\Debug\PapaBobs.DTO.dll
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.Persistence\bin\Debug\PapaBobs.DTO.pdb
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.Persistence\bin\Debug\EntityFramework.xml
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.Persistence\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.Persistence\obj\Debug\PapaBobs.Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.Persistence\obj\Debug\PapaBobs.Persistence.dll
+C:\Users\Gray\Documents\GitHub\PapaBobsMegaChallenge2\PapaBobsMegaChallenge2\PapaBobs.Persistence\obj\Debug\PapaBobs.Persistence.pdb
