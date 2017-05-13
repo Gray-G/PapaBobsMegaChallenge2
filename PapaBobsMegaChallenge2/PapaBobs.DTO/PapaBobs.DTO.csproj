@@ -44,6 +44,7 @@
     <Compile Include="Enums\CrustType.cs" />
     <Compile Include="Enums\PaymentType.cs" />
     <Compile Include="Enums\SizeType.cs" />
+    <Compile Include="OrderDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

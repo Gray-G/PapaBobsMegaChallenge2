@@ -16,7 +16,24 @@ namespace PapaBobs.Web
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Domain.OrderManager.CreateOrder();
+            var order = new DTO.OrderDTO();
+
+            order.OrderId = Guid.NewGuid();
+            order.Size = DTO.Enums.SizeType.Large;
+            order.Crust = DTO.Enums.CrustType.Regular;
+            order.Sausage = true;
+            order.Pepperoni = false;
+            order.GreenPeppers = false;
+            order.Onions = false;
+            order.TotalCost = 14.50M;
+            order.Name = "Test";
+            order.Address = "Test";
+            order.Phone = "1322133";
+            order.Zip = "12334";
+            order.PaymentType = DTO.Enums.PaymentType.Cash;
+            order.Complete = false;
+
+            Domain.OrderManager.CreateOrder(order);
         }
     }
 }
