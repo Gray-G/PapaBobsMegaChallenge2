@@ -11,6 +11,7 @@ namespace PapaBobs.Domain
         public static void CreateOrder(DTO.OrderDTO orderDTO)
         {
             Persistence.OrderRepository.CreateOrder(orderDTO);
+            orderDTO.TotalCost = Domain.PizzaPriceManager.CalculateCost(orderDTO);
         }
     }
 }

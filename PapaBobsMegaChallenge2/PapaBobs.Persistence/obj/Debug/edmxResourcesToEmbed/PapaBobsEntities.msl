@@ -21,5 +21,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="PizzaPrices">
+      <EntityTypeMapping TypeName="PapaBobsDbModel.PizzaPrice">
+        <MappingFragment StoreEntitySet="PizzaPrice">
+          <ScalarProperty Name="GreenPeppersCost" ColumnName="GreenPeppersCost" />
+          <ScalarProperty Name="OnionsCost" ColumnName="OnionsCost" />
+          <ScalarProperty Name="PepperoniCost" ColumnName="PepperoniCost" />
+          <ScalarProperty Name="SausageCost" ColumnName="SausageCost" />
+          <ScalarProperty Name="ThickCrustCost" ColumnName="ThickCrustCost" />
+          <ScalarProperty Name="ThinCrustCost" ColumnName="ThinCrustCost" />
+          <ScalarProperty Name="RegularCrustCost" ColumnName="RegularCrustCost" />
+          <ScalarProperty Name="LargeSizeCost" ColumnName="LargeSizeCost" />
+          <ScalarProperty Name="MediumSizeCost" ColumnName="MediumSizeCost" />
+          <ScalarProperty Name="SmallSizeCost" ColumnName="SmallSizeCost" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
