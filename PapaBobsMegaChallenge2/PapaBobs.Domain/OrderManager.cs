@@ -20,7 +20,19 @@ namespace PapaBobs.Domain
             if (orderDTO.Zip.Trim().Length == 0)
                 throw new Exception("Zip is required.");
 
+            orderDTO.OrderId = Guid.NewGuid();
+            orderDTO.TotalCost = PizzaPriceManager.CalculateCost(orderDTO);
             Persistence.OrderRepository.CreateOrder(orderDTO);
+        }
+
+        public static void CompleteOrder(Guid orderId)
+        {
+            Persistence.OrderRepository.CompleteOrder(orderId);
+        }
+
+        public static object GetOrders()
+        {
+            return Persistence.OrderRepository.GetOrders();
         }
     }
 }

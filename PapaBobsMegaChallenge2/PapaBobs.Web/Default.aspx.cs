@@ -105,7 +105,6 @@ namespace PapaBobs.Web
             var order = new DTO.OrderDTO();
             order.Size = determineSize();
             order.Crust = determineCrust();
-            order.PaymentType = determinePaymentType();
             order.Sausage = sausageCheckBox.Checked;
             order.Pepperoni = pepperoniCheckBox.Checked;
             order.Onions = onionsCheckBox.Checked;
@@ -114,6 +113,7 @@ namespace PapaBobs.Web
             order.Address = addressTextBox.Text.Trim();
             order.Zip = zipTextBox.Text.Trim();
             order.Phone = phoneTextBox.Text.Trim();
+            order.PaymentType = determinePaymentType();
 
             return order;
         }
