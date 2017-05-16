@@ -17,19 +17,43 @@ namespace PapaBobs.Web
 
         protected void orderButton_Click(object sender, EventArgs e)
         {
-            var order = new DTO.OrderDTO();
-            order.Size = determineSize();
-            order.Crust = determineCrust();
-            order.PaymentType = determinePaymentType();
-            order.Sausage = sausageCheckBox.Checked;
-            order.Pepperoni = pepperoniCheckBox.Checked;
-            order.Onions = onionsCheckBox.Checked;
-            order.GreenPeppers = greenPeppersCheckBox.Checked;
-            order.Name = nameTextBox.Text.Trim();
-            order.Address = addressTextBox.Text.Trim();
-            order.Zip = zipTextBox.Text.Trim();
-            order.Phone = phoneTextBox.Text.Trim();
-            order.Complete = false;       
+            if (nameTextBox.Text.Trim().Length == 0)
+            {
+                validationLabel.Text = "Please enter a name.";
+                validationLabel.Visible = true;
+                return;
+            }
+            if (addressTextBox.Text.Trim().Length == 0)
+            {
+                validationLabel.Text = "Please enter an address.";
+                validationLabel.Visible = true;
+                return;
+            }
+            if (zipTextBox.Text.Trim().Length == 0)
+            {
+                validationLabel.Text = "Please enter a zip code.";
+                validationLabel.Visible = true;
+                return;
+            }
+            if (phoneTextBox.Text.Trim().Length == 0)
+            {
+                validationLabel.Text = "Please enter a phone number.";
+                validationLabel.Visible = true;
+                return;
+            }
+
+            try
+            {
+                var order = buildOrder();
+                Domain.OrderManager.CreateOrder(order);
+                Response.Redirect("success.aspx");
+            }
+            catch (Exception ex)
+            {
+                validationLabel.Text = ex.Message;
+                validationLabel.Visible = true;
+                return;
+            }
         }
 
         private SizeType determineSize()
@@ -37,7 +61,7 @@ namespace PapaBobs.Web
             DTO.Enums.SizeType size;
             if (!Enum.TryParse(sizeDropDownList.SelectedValue, out size))
             {
-                //throw new Exception("Size not selected.");
+                throw new Exception("You must choose a size.");
             }
             return size;
         }
@@ -47,7 +71,7 @@ namespace PapaBobs.Web
             DTO.Enums.CrustType crust;
             if (!Enum.TryParse(crustDropDownList.SelectedValue, out crust))
             {
-                //throw new Exception("Crust not selected.");
+                throw new Exception("You must choose a crust.");
             }
             return crust;
         }
@@ -61,13 +85,19 @@ namespace PapaBobs.Web
 
         protected void recalculateTotalCost(Object sender, EventArgs e)
         {
-            if (sizeDropDownList.SelectedValue == String.Empty)
-                return;
-            if (crustDropDownList.SelectedValue == String.Empty)
-                return;
+            if (sizeDropDownList.SelectedValue == String.Empty) return;
+            if (crustDropDownList.SelectedValue == String.Empty) return;
 
             var order = buildOrder();
-            totalLabel.Text = order.TotalCost.ToString("C");
+
+            try
+            {
+                totalLabel.Text = Domain.PizzaPriceManager.CalculateCost(order).ToString("C");
+            }
+            catch
+            {
+                // Swallow exception
+            }
         }
 
         private DTO.OrderDTO buildOrder()
@@ -84,7 +114,6 @@ namespace PapaBobs.Web
             order.Address = addressTextBox.Text.Trim();
             order.Zip = zipTextBox.Text.Trim();
             order.Phone = phoneTextBox.Text.Trim();
-            order.Complete = false;
 
             return order;
         }

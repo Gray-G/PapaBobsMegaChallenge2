@@ -19,6 +19,7 @@
             <div class="form-group">
                 <label>Size</label>
                 <asp:DropDownList ID="sizeDropDownList" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="recalculateTotalCost">
+                    <asp:ListItem Value="" Selected="True">Choose one ...</asp:ListItem>
                     <asp:ListItem Value="Small">Small - $12</asp:ListItem>
                     <asp:ListItem Value="Medium">Medium - $14</asp:ListItem>
                     <asp:ListItem Value="Large">Large - $16</asp:ListItem>
@@ -28,6 +29,7 @@
             <div class="form-group">
                 <label>Crust</label>
                 <asp:DropDownList ID="crustDropDownList" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="recalculateTotalCost">
+                    <asp:ListItem Value="" Selected="True">Choose one ...</asp:ListItem>
                     <asp:ListItem Value="Regular">Regular</asp:ListItem>
                     <asp:ListItem Value="Thin">Thin</asp:ListItem>
                     <asp:ListItem Value="Thick">Thick + $2</asp:ListItem>
@@ -74,6 +76,7 @@
             <p>&nbsp;</p>
         
             <asp:Button ID="orderButton" runat="server" Text="Order" CssClass="btn btn-lg btn-primary" OnClick="orderButton_Click"/>
+            <asp:Label ID="validationLabel" runat="server" Visible="false" CssClass="bg-danger"></asp:Label>
         </div>
 
     </form>
